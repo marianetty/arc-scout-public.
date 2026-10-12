@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "dev/**"
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    env:
+      ARC_SCOUT_PAY_TO: "0x0000000000000000000000000000000000000001"
+      ARC_SCOUT_TOKEN_SCAN_PRICE: "$0.005"
+      ARC_MAINNET_RPC_URL: "https://rpc.mainnet.arc.io"
+      ARC_EXPLORER_API_URL: "https://explorer.arc.io/api/v2"
+      DEXSCREENER_API_URL: "https://api.dexscreener.com/latest/dex/tokens"
+      ARC_SCOUT_ENABLE_DEV_SCAN: "false"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Evidence regression tests
+        run: npm test
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+

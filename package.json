@@ -1,0 +1,26 @@
+{
+  "name": "arc-scout",
+  "version": "0.6.0-dev",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "dependencies": {
+    "@x402/core": "2.15.0",
+    "@x402/evm": "2.15.0",
+    "@x402/next": "2.15.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "viem": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "typescript": "5.9.3"
+  }
+}

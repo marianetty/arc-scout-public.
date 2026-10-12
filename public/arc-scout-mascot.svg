@@ -1,0 +1,72 @@
+<svg width="560" height="430" viewBox="0 0 560 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="shell" x1="170" y1="70" x2="420" y2="360" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#25E3FF"/>
+    <stop offset=".38" stop-color="#4F78FF"/>
+    <stop offset=".72" stop-color="#8460FF"/>
+    <stop offset="1" stop-color="#C44BFF"/>
+  </linearGradient>
+  <linearGradient id="body" x1="230" y1="250" x2="355" y2="390" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E9F6FF"/>
+    <stop offset=".38" stop-color="#8EC8FF"/>
+    <stop offset="1" stop-color="#6D60FF"/>
+  </linearGradient>
+  <radialGradient id="visor" cx="0" cy="0" r="1" gradientTransform="translate(286 171) rotate(90) scale(94 126)" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#172B58"/>
+    <stop offset="1" stop-color="#050A17"/>
+  </radialGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="10" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#183DFF" flood-opacity=".30"/>
+  </filter>
+</defs>
+
+<ellipse cx="303" cy="394" rx="132" ry="24" fill="#15306F" opacity=".25"/>
+
+<g opacity=".74">
+  <rect x="46" y="76" width="120" height="84" rx="18" fill="#0A1B3E" stroke="#20D8FF" stroke-width="2"/>
+  <rect x="65" y="96" width="38" height="46" rx="8" stroke="#2CDFFF" stroke-width="5"/>
+  <path d="M115 107H146M115 121H146M115 135H137" stroke="#3374FF" stroke-width="5" stroke-linecap="round"/>
+  <rect x="402" y="54" width="112" height="104" rx="20" fill="#0C1B42" stroke="#9850FF" stroke-width="2"/>
+  <circle cx="431" cy="90" r="9" fill="#27D9FF"/>
+  <circle cx="474" cy="77" r="10" fill="#61B3FF"/>
+  <circle cx="490" cy="119" r="10" fill="#B24DFF"/>
+  <path d="M440 89L466 80M480 86L486 109M440 96L482 115" stroke="#65B7FF" stroke-width="4"/>
+</g>
+
+<g filter="url(#shadow)">
+  <path d="M217 252C192 284 188 334 208 373C239 394 331 398 367 374C386 336 377 283 352 252H217Z" fill="url(#body)" stroke="url(#shell)" stroke-width="7"/>
+  <path d="M237 270C230 302 232 344 246 370C271 380 313 380 337 368C349 337 348 301 340 270H237Z" fill="#0A1632" opacity=".95"/>
+
+  <path d="M274 301L292 333L310 301L302 350H282L274 301Z" fill="#70E8FF" filter="url(#glow)"/>
+
+  <circle cx="207" cy="297" r="32" fill="#09142D" stroke="url(#shell)" stroke-width="8"/>
+  <circle cx="368" cy="297" r="32" fill="#09142D" stroke="url(#shell)" stroke-width="8"/>
+
+  <path d="M188 316C156 308 135 288 122 259" stroke="#34D8FF" stroke-width="17" stroke-linecap="round"/>
+  <circle cx="116" cy="246" r="17" fill="#071125" stroke="#34D8FF" stroke-width="7"/>
+
+  <path d="M387 314C414 290 427 256 427 221" stroke="#B05CFF" stroke-width="17" stroke-linecap="round"/>
+  <path d="M427 222C449 200 461 179 462 152" stroke="#B05CFF" stroke-width="17" stroke-linecap="round"/>
+  <path d="M462 152L466 113" stroke="#B05CFF" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="467" cy="99" r="14" fill="#071125" stroke="#B05CFF" stroke-width="6"/>
+
+  <rect x="151" y="65" width="268" height="205" rx="96" fill="url(#shell)"/>
+  <rect x="165" y="79" width="240" height="177" rx="82" fill="#0A1530"/>
+  <rect x="191" y="103" width="188" height="129" rx="58" fill="url(#visor)" stroke="#344A8A" stroke-width="2"/>
+
+  <path d="M223 158C234 143 247 143 259 158" stroke="#58EAFF" stroke-width="11" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M310 158C322 143 335 143 347 158" stroke="#58EAFF" stroke-width="11" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M260 198C280 214 304 214 324 197" stroke="#8A7AFF" stroke-width="9" stroke-linecap="round"/>
+
+  <rect x="128" y="127" width="43" height="82" rx="22" fill="#071125" stroke="#28D6FF" stroke-width="8"/>
+  <rect x="400" y="127" width="43" height="82" rx="22" fill="#071125" stroke="#A15BFF" stroke-width="8"/>
+</g>
+
+<g filter="url(#glow)">
+  <path d="M69 23L78 44L99 53L78 62L69 83L60 62L39 53L60 44L69 23Z" fill="#55E4FF"/>
+</g>
+</svg>
